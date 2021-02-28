@@ -2,42 +2,57 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.global.css';
 import Runner from "./services/Runner";
+import Select from 'react-select';
 
-const ActionItem = ({ item = { execute: '', displayText: ''} }) => {
-  return (
-    <button type="button" onClick={item.execute}>
-      { item.displayText }
-    </button>
-  )
-}
+class Main extends React.Component {
+  constructor(props: any) {
+    super(props);
 
-const ActionItemsList = ({ items = [{ name: ''}] }) => {
-  return (
-    <div>
-      { items.map(function(item) {
-        return <ActionItem key={item.name} item={item}/>
-      })}
-    </div>
-  )
-}
-
-const Main = () => {
-  const runner = new Runner()
-
-  const handleKeyPress = (event) => {
-    if(event.key === 'Enter'){
-      console.log('enter press here! ')
-    }
+    this.state = {
+      selectedOption: null,
+      runner: new Runner()
+    };
   }
 
-  return (
-    <div onKeyPress={handleKeyPress}>
-      <h1>Script Runner</h1>
-      <div className="Main">
-        <ActionItemsList items={runner.scripts}/>
+  handleChange = selectedOption => {
+    this.setState({ selectedOption });
+    console.log(`Option selected:`, selectedOption);
+  };
+
+  render() {
+    const customStyles = {
+      menu: (provided, state) => ({
+        ...provided,
+        width: state.selectProps.width,
+        color: state.selectProps.menuColor,
+      }),
+
+      control: (provided, state) => ({
+        ...provided,
+        width: state.selectProps.width,
+        color: state.selectProps.menuColor,
+      }),
+    }
+
+    const { selectedOption } = this.state;
+
+    return (
+      <div>
+        <h1>Script Runner</h1>
+
+        <Select
+          autoFocus="true"
+          menuIsOpen={true}
+          value={selectedOption}
+          onChange={this.handleChange}
+          styles={customStyles}
+          width='300px'
+          options={this.state.runner.scripts}
+        />
       </div>
-    </div>
-  )
+
+    );
+  }
 }
 
 export default function App() {

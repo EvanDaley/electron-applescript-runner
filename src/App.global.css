@@ -4,7 +4,6 @@
  */
 body {
   position: relative;
-  color: white;
   height: 100vh;
   background: linear-gradient(
     200.96deg,
@@ -16,7 +15,10 @@ body {
   overflow-y: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+h1 {
+  color: white;
 }
 
 button {
@@ -34,10 +36,6 @@ button {
 
 button:hover {
   transform: scale(1.05);
-}
-
-li {
-  list-style: none;
 }
 
 a {

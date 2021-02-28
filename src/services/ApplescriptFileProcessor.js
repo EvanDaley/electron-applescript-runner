@@ -10,10 +10,10 @@ export default class {
     const content = this.readFile(file)
     const name =  this.nameWithoutExtention(file)
     const shortcut = this.shortcutKeysForFile(name)
-    const displayText = this.displayText(name, shortcut)
+    const label = this.displayText(name, shortcut)
     const execute = () => { this.runApplescript(content) }
 
-    return { name, content, shortcut, displayText, execute }
+    return { name, content, shortcut, label, execute, value: name }
   }
 
   readFile(file) {
