@@ -1,34 +1,46 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import icon from '../assets/icon.svg';
 import './App.global.css';
+import Runner from "./services/Runner";
 
-const Hello = () => {
-  const writeLog = () => {
-    console.log('WE DID IT')
-  }
+const ActionItem = (actionItem) => {
+  return (
+    <button type="button" onClick={runner.runApplescript}>
+      Write a log
+    </button>
+  )
+}
+
+const ActionItemList = () => {
+  const numbers = [1, 2, 3, 4, 5];
+  const listItems = numbers.map((number) =>
+    <li>{number}</li>
+  )
+
+  return listItems
+}
+
+const Main = () => {
+  // const runner = new Runner()
 
   return (
     <div>
-      <div className="Hello">
-        <img width="200px" alt="icon" src={icon} />
-      </div>
-      <h1>electron-react-boilerplate</h1>
-      <div className="Hello">
-        <button type="button" onClick={writeLog}>
-          Write a log
-        </button>
+      <h1>Script Runner</h1>
+      <div className="Main">
+        {/*<button type="button" onClick={runner.runApplescript}>*/}
+        {/*  Write a log*/}
+        {/*</button>*/}
       </div>
     </div>
-  );
+  )
 }
 
 export default function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/" component={Hello} />
+        <Route path="/" component={Main} />
       </Switch>
     </Router>
-  );
+  )
 }
