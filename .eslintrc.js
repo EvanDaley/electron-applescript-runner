@@ -3,7 +3,7 @@ module.exports = {
   rules: {
     // A temporary hack related to IDE not resolving correct package.json
     'import/no-extraneous-dependencies': 'off',
-    "semi": ["error", "never"],
+    semi: ['error', 'never'],
   },
   parserOptions: {
     ecmaVersion: 2020,

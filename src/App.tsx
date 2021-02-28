@@ -5,7 +5,7 @@ import './App.global.css';
 
 const Hello = () => {
   const writeLog = () => {
-    console.log("WE DID IT")
+    console.log('WE DID IT')
   }
 
   return (
@@ -21,7 +21,7 @@ const Hello = () => {
       </div>
     </div>
   );
-};
+}
 
 export default function App() {
   return (
