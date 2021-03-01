@@ -1,0 +1,3 @@
+tell application "Electron"
+	activate
+end tell
