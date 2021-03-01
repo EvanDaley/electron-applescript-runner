@@ -30,13 +30,20 @@ export default class {
   }
 
   displayText(name, shortcut) {
-    let result = humanizeString(name)
+    let formattedString = name
 
-    if (shortcut) {
-      result = `[${shortcut}] ${result}`
+    const words = formattedString.split(/(?=[A-Z])/);
+    for (let i = 0; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].substr(1);
     }
 
-    return result
+    formattedString = words.join(" ").replace("_", ":")
+
+    if (shortcut) {
+      formattedString = `[${shortcut}] ${formattedString}`
+    }
+
+    return formattedString
   }
 
   runApplescript(scriptContent) {

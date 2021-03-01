@@ -5,4 +5,8 @@ export default class {
     const applescriptLoader = new ApplescriptLoader()
     this.scripts = applescriptLoader.getScripts()
   }
+
+  findScriptByShortcut(shortcut) {
+    return this.scripts.find(item => item.shortcut === shortcut)
+  }
 }

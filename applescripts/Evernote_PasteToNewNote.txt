@@ -1,0 +1,9 @@
+-- Go to evernote, create a new note, paste the clipboard.
+
+tell application "Evernote"
+	activate
+	delay 1
+	tell application "System Events" to keystroke "n" using command down
+	delay 1
+	tell application "System Events" to keystroke "v" using command down
+end tell

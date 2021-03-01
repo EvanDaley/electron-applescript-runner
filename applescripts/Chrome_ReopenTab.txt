@@ -1,0 +1,5 @@
+tell application "Chrome"
+	activate
+	delay .4
+  tell application "System Events" to keystroke "t" using {command down, shift down}
+end tell

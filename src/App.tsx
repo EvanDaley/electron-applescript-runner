@@ -10,14 +10,39 @@ class Main extends React.Component {
 
     this.state = {
       selectedOption: null,
-      runner: new Runner()
+      runner: new Runner(),
+      runImmediately: true,
     };
   }
 
-  handleChange = selectedOption => {
-    this.setState({ selectedOption });
-    console.log(`Option selected:`, selectedOption);
+  resetSelection = () => {
+    this.setState({ selectedOption: null })
+  }
+
+  handleSelection = selectedOption => {
+    console.log(`Option selected:`, selectedOption)
+
+    if (selectedOption) {
+      selectedOption.execute()
+    }
+
+    this.resetSelection()
   };
+
+  handleKeyPress = event => {
+    const inputText = event.nativeEvent.target.value + event.key
+    const script = this.state.runner.findScriptByShortcut(inputText)
+
+    if (script) {
+      console.log(`Running script ${script.name}`)
+      script.execute()
+      this.resetSelection(event)
+    }
+  };
+
+  handleCheckboxChange = () => {
+    this.setState({runImmediately: !this.state.runImmediately})
+  }
 
   render() {
     const customStyles = {
@@ -31,20 +56,22 @@ class Main extends React.Component {
         ...provided,
         width: state.selectProps.width,
         color: state.selectProps.menuColor,
+        marginTop: '5px'
       }),
     }
 
-    const { selectedOption } = this.state;
-
     return (
       <div>
+        {/*{ JSON.stringify(this.state.selectedOption)}*/}
+
         <h1>Script Runner</h1>
 
         <Select
           autoFocus="true"
           menuIsOpen={true}
-          value={selectedOption}
-          onChange={this.handleChange}
+          value={this.state.selectedOption}
+          onChange={this.handleSelection}
+          onKeyDown={this.handleKeyPress}
           styles={customStyles}
           width='300px'
           options={this.state.runner.scripts}

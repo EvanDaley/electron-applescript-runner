@@ -1,0 +1,7 @@
+tell application "Chrome"
+	activate
+	delay .2
+  open location "https://bitbucket.org/dashboard/pullrequests?section=created"
+  delay .2
+  activate
+end tell
