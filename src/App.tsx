@@ -73,7 +73,7 @@ class Main extends React.Component {
           onChange={this.handleSelection}
           onKeyDown={this.handleKeyPress}
           styles={customStyles}
-          width='300px'
+          width='600px'
           options={this.state.runner.scripts}
         />
       </div>

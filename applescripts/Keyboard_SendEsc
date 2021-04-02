@@ -1,0 +1,17 @@
+-- Switch to most recent app
+tell application "System Events"
+    key down command
+    keystroke tab
+    key code 123
+    repeat while (exists list 2 of process "Dock")
+        delay 0.1
+    end repeat
+    key up command
+end tell
+
+delay 0.1
+
+-- Send that app the ESCAPE command.
+tell application "System Events"
+    key code 53
+end tell
