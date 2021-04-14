@@ -32,8 +32,11 @@ tell application "Rubymine"
 end tell
 
 tell application "System Events" to tell process "RubyMine"
-  set position of window 1 to {1300, 100}
-  set size of window 1 to {1100, 1250}
+  repeat with theWindow in windows
+    set position of theWindow to {1300, 100}
+    set size of theWindow to {1100, 1250}
+  end repeat
+
   set visible to true
   set frontmost to true
 end tell

@@ -20,27 +20,15 @@ tell application "Finder"
    -- set visible of every process whose visible is true and name is not "Finder" to false
 end tell
 
-tell application "System Events" to tell process "Evernote"
-    set position of window 1 to {20, 100}
-    set size of window 1 to {820, 1250}
-    set visible to true
-    set frontmost to true
-end tell
-
 tell application "Rubymine"
   activate
 end tell
 
 tell application "System Events" to tell process "RubyMine"
-  set position of window 1 to {840, 100}
-  set size of window 1 to {1600, 1250}
-
-  -- NOTE: You might need to take this out. This is ideal for my use case since I use two instances of Rubymine. 
-  -- NOTE: You might need to take this out. This is ideal for my use case since I use two instances of Rubymine. 
-  -- NOTE: You might need to take this out. This is ideal for my use case since I use two instances of Rubymine. 
-  -- NOTE: You might need to take this out. This is ideal for my use case since I use two instances of Rubymine. 
-  set position of window 2 to {840, 100}
-  set size of window 2 to {1600, 1250}
+  repeat with theWindow in windows
+    set position of theWindow to {300, 100}
+    set size of theWindow to {2100, 1250}
+  end repeat
 
   set visible to true
   set frontmost to true

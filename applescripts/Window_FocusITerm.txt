@@ -20,13 +20,6 @@ tell application "Finder"
    -- set visible of every process whose visible is true and name is not "Finder" to false
 end tell
 
-tell application "Rubymine"
+tell application "iTerm"
   activate
-end tell
-
-tell application "System Events" to tell process "RubyMine"
-  set position of window 1 to {300, 100}
-  set size of window 1 to {1900, 1250}
-  set visible to true
-  set frontmost to true
 end tell

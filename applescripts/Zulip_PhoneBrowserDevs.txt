@@ -1,0 +1,21 @@
+tell application "System Events" to tell process "Zulip"
+    set position of window 1 to {300, 100}
+    set size of window 1 to {1900, 1250}
+    set visible to true
+    set frontmost to true
+
+    delay .2
+
+    key code 53
+    key code 53
+
+    keystroke "q"
+
+    keystroke "phone browser devs"
+
+    delay .8
+
+    keystroke return
+end tell
+
+

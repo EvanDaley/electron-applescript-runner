@@ -1,24 +1,29 @@
 export default [
   // Layouts
-  { shortcut: '1', type: 'applescript', name: 'Window_Config1_FocusEvernote' },
-  { shortcut: '2', type: 'applescript', name: 'Window_Config2_FocusRubymine' },
-  { shortcut: '3', type: 'applescript', name: 'Window_Config3_SplitRubymineChrome' },
-  { shortcut: '4', type: 'applescript', name: 'Window_Config4_FocusChrome' },
+  { shortcut: '1', type: 'applescript', name: 'Window_FocusEvernote' },
+  { shortcut: '2', type: 'applescript', name: 'Window_FocusRubymine' },
+  { shortcut: '3', type: 'applescript', name: 'Window_SplitRubymineChrome' },
+  { shortcut: '4', type: 'applescript', name: 'Window_FocusChrome' },
+  { shortcut: '5', type: 'applescript', name: 'Window_SplitRubymineEvernote' },
+  { shortcut: '6', type: 'applescript', name: 'Window_FocusITerm' },
+
+  { shortcut: '9', type: 'applescript', name: 'Vscode_Open' },
+  { shortcut: '0', type: 'applescript', name: 'Window_Meeting' },
 
   // Evernote
-  { shortcut: 'ep', type: 'applescript', name: 'Everote_PasteToNewNote' },
+  { shortcut: 'epaste', type: 'applescript', name: 'Everote_PasteToNewNote' },
   { shortcut: 'oe', type: 'applescript', name: 'Evernote_Open' },
 
   // Rubymine
-  { shortcut: 'a', type: 'applescript', name: 'Rubymine_Open' },
+  { shortcut: 'oa', type: 'applescript', name: 'Rubymine_Open' },
 
   // Spotify
-  { shortcut: 'so', type: 'applescript', name: 'Spotify_PreviousSong' },
-  { shortcut: 'sp', type: 'applescript', name: 'Spotify_SkipSong' },
+  { shortcut: 'prev', type: 'applescript', name: 'Spotify_PreviousSong' },
+  { shortcut: 'next', type: 'applescript', name: 'Spotify_SkipSong' },
   { shortcut: 'os', type: 'applescript', name: 'Spotify_Open' },
 
   // Chrome
-  { shortcut: 'cc', type: 'applescript', name: 'Chrome_CloseTab' },
+  { shortcut: 'cw', type: 'applescript', name: 'Chrome_CloseTab' },
   { shortcut: 'oc', type: 'applescript', name: 'Chrome_Activate' },
   { shortcut: 'ct', type: 'applescript', name: 'Chrome_NewTab' },
   { shortcut: 'crt', type: 'applescript', name: 'Chrome_ReopenTab' },
@@ -30,8 +35,8 @@ export default [
   { shortcut: 'ov', type: 'applescript', name: 'Vscode_Open' },
 
   // Zulip
-  { shortcut: 'm', type: 'applescript', name: 'Zulip_Open' },
+  { shortcut: 'me', type: 'applescript', name: 'Zulip_Open' },
 
   // Keyboard 
-  { shortcut: 'e', type: 'applescript', name: 'Keyboard_SendEsc' },
+  { shortcut: 'es', type: 'applescript', name: 'Keyboard_SendEsc' },
 ]
