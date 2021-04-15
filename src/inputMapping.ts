@@ -27,7 +27,7 @@ export default [
   { shortcut: 'oc', type: 'applescript', name: 'Chrome_Activate' },
   { shortcut: 'ct', type: 'applescript', name: 'Chrome_NewTab' },
   { shortcut: 'crt', type: 'applescript', name: 'Chrome_ReopenTab' },
-  { shortcut: 'ch', type: 'applescript', name: 'Chrome_HolmesExtension' },
+  { shortcut: 'cho', type: 'applescript', name: 'Chrome_HolmesExtension' },
   { shortcut: 'cmp', type: 'applescript', name: 'Chrome_OpenMyPrs' },
   { shortcut: 'ctp', type: 'applescript', name: 'Chrome_OpenTeamPrs' },
 
