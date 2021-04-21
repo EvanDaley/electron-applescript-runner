@@ -1,5 +1,5 @@
 -- set ignoredList to {"Finder", "Electron"}
-set ignoredList to {""}
+set ignoredList to {"Electron"}
 
 tell application "Finder"
    activate
@@ -21,15 +21,22 @@ tell application "Finder"
 end tell
 
 tell application "System Events" to tell process "Evernote"
-    set position of window 1 to {300, 0}
-    set size of window 1 to {1000, 650}
+    set position of window 1 to {20, 100}
+    set size of window 1 to {820, 1250}
     set visible to true
     set frontmost to true
 end tell
 
-tell application "System Events" to tell process "Chrome"
-    set position of window 1 to {1200, 0}
-    set size of window 1 to {650, 650}
-    set visible to true
-    set frontmost to true
+tell application "Rubymine"
+  activate
+end tell
+
+tell application "System Events" to tell process "RubyMine"
+  repeat with theWindow in windows
+    set position of theWindow to {840, 100}
+    set size of theWindow to {1600, 1250}
+  end repeat
+
+  set visible to true
+  set frontmost to true
 end tell

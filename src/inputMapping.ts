@@ -6,6 +6,7 @@ export default [
   { shortcut: '4', type: 'applescript', name: 'Window_FocusChrome' },
   { shortcut: '5', type: 'applescript', name: 'Window_SplitRubymineEvernote' },
   { shortcut: '6', type: 'applescript', name: 'Window_FocusITerm' },
+  { shortcut: '7', type: 'applescript', name: 'Window_SplitEvernoteChrome' },
 
   { shortcut: '9', type: 'applescript', name: 'Vscode_Open' },
   { shortcut: '0', type: 'applescript', name: 'Window_Meeting' },
