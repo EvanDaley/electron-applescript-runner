@@ -11,7 +11,7 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import path from 'path';
-import { app, BrowserWindow, shell } from 'electron';
+import { app, BrowserWindow, shell, globalShortcut } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
@@ -115,6 +115,11 @@ const createWindow = async () => {
  * Add event listeners...
  */
 
+// app.on('window-all-closed', (e: any) => {
+  // e.preventDefault()
+  // e.returnValue = false
+// })
+
 app.on('window-all-closed', () => {
   // Respect the OSX convention of having the application in memory even
   // after all windows have been closed
@@ -130,3 +135,25 @@ app.on('activate', () => {
   // dock icon is clicked and there are no other windows open.
   if (mainWindow === null) createWindow();
 });
+
+app.whenReady().then(() => {
+  const ret = globalShortcut.register('Shift+Enter', () => {
+    console.log('Shift+Enter is pressed')
+
+    if (mainWindow) {
+      mainWindow.webContents.send('asynchronous-message', {'SAVED': 'File Saved'});
+    }
+  })
+
+  if (!ret) {
+    console.log('registration failed')
+  }
+
+  // Check whether a shortcut is registered.
+  console.log(globalShortcut.isRegistered('CommandOrControl+X'))
+})
+
+app.on('will-quit', () => {
+  // Unregister all shortcuts.
+  globalShortcut.unregisterAll()
+})

@@ -9,4 +9,9 @@ export default class {
   findScriptByShortcut(shortcut) {
     return this.scripts.find(item => item.shortcut === shortcut)
   }
+
+  findScriptByName(name) {
+    console.log(this.scripts)
+    return this.scripts.find(item => item.name === name)
+  }
 }

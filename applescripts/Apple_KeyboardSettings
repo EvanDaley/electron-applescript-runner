@@ -1,6 +1,6 @@
 tell application "System Preferences"
   activate
-  set the current pane to pane id "com.apple.preference.displays"
+  set the current pane to pane id "com.apple.preference.keyboard"
 end tell
 
 tell application "System Events"

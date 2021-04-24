@@ -4,14 +4,6 @@ tell application "System Preferences"
   get the name of every anchor of pane id "com.apple.preference.expose"
 
   set theList to the name of every anchor of pane id "com.apple.preference.expose"
-
-  -- debugging:
-  -- repeat with a from 1 to length of theList  
-  -- set theCurrentListItem to item a of theList
-  -- Process the current list item
-  -- display dialog theCurrentListItem & " is item " & a & " in the list."
-  -- end repeat
-
  reveal anchor "Spaces" of pane id "com.apple.preference.expose"
 end tell
 

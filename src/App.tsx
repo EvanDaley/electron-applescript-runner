@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.global.css';
 import Runner from "./services/Runner";
 import Select from 'react-select';
+import { ipcRenderer }  from 'electron'
 
 class Main extends React.Component {
   constructor(props: any) {
@@ -13,13 +14,22 @@ class Main extends React.Component {
       runner: new Runner(),
       runImmediately: true,
     };
+
+    ipcRenderer.on('asynchronous-message', (evt, message) => {
+      // TODO: Improve this line. Theres a few limitations here:
+      // 1. This depends on the script existing
+      // 2. It depends on the file by name
+      // 3. For the real release, the app won't be called electron!
+      const launchScript = this.state.runner.findScriptByName('Electron_Activate')
+      launchScript.execute();
+    });
   }
 
   resetSelection = () => {
     this.setState({ selectedOption: null })
   }
 
-  handleSelection = selectedOption => {
+  handleSelection = (selectedOption: any) => {
     console.log(`Option selected:`, selectedOption)
 
     if (selectedOption) {
@@ -29,14 +39,14 @@ class Main extends React.Component {
     this.resetSelection()
   };
 
-  handleKeyPress = event => {
+  handleKeyPress = (event: any) => {
     const inputText = event.nativeEvent.target.value + event.key
     const script = this.state.runner.findScriptByShortcut(inputText)
 
     if (script) {
       console.log(`Running script ${script.name}`)
       script.execute()
-      this.resetSelection(event)
+      this.resetSelection()
     }
   };
 
@@ -62,8 +72,6 @@ class Main extends React.Component {
 
     return (
       <div>
-        {/*{ JSON.stringify(this.state.selectedOption)}*/}
-
         <h1>Script Runner</h1>
 
         <Select

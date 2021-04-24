@@ -3175,6 +3175,11 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001157:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001159.tgz#bebde28f893fa9594dadcaa7d6b8e2aa0299df20"
   integrity sha512-w9Ph56jOsS8RL20K9cLND3u/+5WASWdhC/PPrf+V3/HsM3uHOavWOR1Xzakbv4Puo/srmPHudkmCRWM7Aq+/UA==
 
+capslock@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/capslock/-/capslock-1.0.2.tgz#dac23d394bf5774615e3c3fa7413eec15d81ef75"
+  integrity sha512-AKb64vbURdb1wZ/pNpSqL0XyyaRxepooYMcKFhlyidJHx+QO70GAC23TP1GoybXxrC6KPSOkx9Oyz44O39e0cw==
+
 capture-exit@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/capture-exit/-/capture-exit-2.0.0.tgz#fb953bfaebeb781f62898239dabb426d08a509a4"
