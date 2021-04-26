@@ -1,3 +1,14 @@
+
+// Dev notes:
+// This file lets you map specific shortcuts to behaviors.
+// As a convention, 'o' is short for "open". "oe" means "open evernote"
+// I like to keep my fingers on the home row when possible. Thats why "oa" is used for "open rubymine"
+// Lately I've been relying on the "Window_" applescripts a lot so I mapped those directly to numbers.
+
+// General tips:
+// Try not to add too many one or two character shortcuts (you'll get accidental matches when typing)
+
+
 export default [
   // Layouts
   { shortcut: '1', type: 'applescript', name: 'Window_FocusEvernote' },
@@ -36,7 +47,7 @@ export default [
   { shortcut: 'ov', type: 'applescript', name: 'Vscode_Open' },
 
   // Zulip
-  { shortcut: 'me', type: 'applescript', name: 'Zulip_Open' },
+  { shortcut: 'oz', type: 'applescript', name: 'Zulip_Open' },
 
   // Keyboard 
   { shortcut: 'es', type: 'applescript', name: 'Keyboard_SendEsc' },
