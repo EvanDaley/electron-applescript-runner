@@ -13,7 +13,7 @@ tell application "System Events" to tell process "Zulip"
 
     keystroke "hanna kalesnikava"
 
-    delay .2
+    delay .7
 
     keystroke return
 end tell

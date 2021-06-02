@@ -13,9 +13,9 @@ tell application "System Events" to tell process "Zulip"
 
     keystroke "daniel m"
 
-    delay .8
+    delay .7    
 
     keystroke return
-end tell
+end tell    
 
 
