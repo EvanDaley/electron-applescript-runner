@@ -1,0 +1,4 @@
+tell application "Finder"
+   activate
+   set visible of every process whose visible is true and name is not "Finder" to false
+end tell

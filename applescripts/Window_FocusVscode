@@ -1,0 +1,35 @@
+-- set ignoredList to {"Finder", "Electron"}
+set ignoredList to {"Electron"}
+
+tell application "Finder"
+   activate
+   set listOfProcesses to (name of every process where visible is true)
+   
+   -- now we've got a list of visible processes. You can see the list in a dialog using:
+   -- tell me to set selectedProcesses to choose from list listOfProcesses with multiple selections allowed
+
+   repeat with a from 1 to length of listOfProcesses
+      set theCurrentListItem to item a of listOfProcesses
+
+      -- Process the current list item
+      if ignoredList does not contain theCurrentListItem
+        set visible of every process whose visible is true and name is theCurrentListItem to false
+      end if
+    end repeat
+
+   -- set visible of every process whose visible is true and name is not "Finder" to false
+end tell
+
+tell application "Rubymine"
+  activate
+end tell
+
+tell application "System Events" to tell process "Code"
+  repeat with theWindow in windows
+    set position of theWindow to {300, 100}
+    set size of theWindow to {2100, 1250}
+  end repeat
+
+  set visible to true
+  set frontmost to true
+end tell
