@@ -18,7 +18,7 @@ export default [
   { shortcut: '5', type: 'applescript', name: 'Window_SplitRubymineEvernote' },
   { shortcut: '6', type: 'applescript', name: 'Window_FocusITerm' },
   { shortcut: '7', type: 'applescript', name: 'Window_SplitEvernoteChrome' },
-
+  { shortcut: '8', type: 'applescript', name: 'Window_SplitChromeVscode' },
   { shortcut: '9', type: 'applescript', name: 'Vscode_Focus' },
   { shortcut: '0', type: 'applescript', name: 'Window_Meeting' },
 
@@ -54,6 +54,6 @@ export default [
   // Zulip
   { shortcut: 'oz', type: 'applescript', name: 'Zulip_Open' },
 
-  // Keyboard 
+  // Keyboard
   { shortcut: 'es', type: 'applescript', name: 'Keyboard_SendEsc' },
 ]

@@ -1,9 +1,6 @@
 set ignoredList to {"Electron"}
 
 tell application "System Events" to tell process "Code"
-    activate
-    set position of window 1 to {300, 100}
-    set size of window 1 to {1900, 1250}
     set visible to true
     set frontmost to true
 end tell
