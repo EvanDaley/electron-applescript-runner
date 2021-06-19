@@ -1,0 +1,4 @@
+tell application "Google Chrome"
+  activate
+  set active tab index of first window to 2
+end tell

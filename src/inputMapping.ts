@@ -43,8 +43,13 @@ export default [
   { shortcut: 'cmp', type: 'applescript', name: 'Chrome_OpenMyPrs' },
   { shortcut: 'ctp', type: 'applescript', name: 'Chrome_OpenTeamPrs' },
 
+  { shortcut: 'one', type: 'applescript', name: 'Chrome_TabOne' },
+  { shortcut: 'two', type: 'applescript', name: 'Chrome_TabTwo' },
+  { shortcut: 'three', type: 'applescript', name: 'Chrome_TabThree' },
+  { shortcut: 'four', type: 'applescript', name: 'Chrome_TabFour' },
+
   // VS Code
-  { shortcut: 'ov', type: 'applescript', name: 'Vscode_Open' },
+  { shortcut: 'ov', type: 'applescript', name: 'Vscode_Focus' },
 
   // Zulip
   { shortcut: 'oz', type: 'applescript', name: 'Zulip_Open' },
