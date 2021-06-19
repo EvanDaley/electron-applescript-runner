@@ -19,7 +19,7 @@ export default [
   { shortcut: '6', type: 'applescript', name: 'Window_FocusITerm' },
   { shortcut: '7', type: 'applescript', name: 'Window_SplitEvernoteChrome' },
 
-  { shortcut: '9', type: 'applescript', name: 'Vscode_Open' },
+  { shortcut: '9', type: 'applescript', name: 'Vscode_Focus' },
   { shortcut: '0', type: 'applescript', name: 'Window_Meeting' },
 
   // Evernote
@@ -49,7 +49,7 @@ export default [
   { shortcut: 'four', type: 'applescript', name: 'Chrome_TabFour' },
 
   // VS Code
-  { shortcut: 'ov', type: 'applescript', name: 'Vscode_Focus' },
+  { shortcut: 'ov', type: 'applescript', name: 'Vscode_Open' },
 
   // Zulip
   { shortcut: 'oz', type: 'applescript', name: 'Zulip_Open' },

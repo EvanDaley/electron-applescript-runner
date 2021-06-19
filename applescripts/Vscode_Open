@@ -1,21 +1,7 @@
 set ignoredList to {"Electron"}
 
-tell application "Finder"
-   activate
-   set listOfProcesses to (name of every process where visible is true)
-   
-   repeat with a from 1 to length of listOfProcesses
-      set theCurrentListItem to item a of listOfProcesses
-
-      if ignoredList does not contain theCurrentListItem
-        set visible of every process whose visible is true and name is theCurrentListItem to false
-      end if
-    end repeat
-
-   -- set visible of every process whose visible is true and name is not "Finder" to false
-end tell
-
 tell application "System Events" to tell process "Code"
+    activate
     set position of window 1 to {300, 100}
     set size of window 1 to {1900, 1250}
     set visible to true
