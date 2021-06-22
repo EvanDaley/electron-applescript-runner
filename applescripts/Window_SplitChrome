@@ -21,15 +21,15 @@ tell application "Finder"
 end tell
 
 tell application "System Events" to tell process "Chrome"
-    set position of window 1 to {200, 100}
+    set position of window 1 to {150, 100}
     set size of window 1 to {1100, 1250}
     set visible to true
     set frontmost to true
 end tell
 
 tell application "System Events" to tell process "Chrome"
-    set position of window 2 to {1300, 100}
-    set size of window 2 to {1600, 1250}
+    set position of window 2 to {1250, 100}
+    set size of window 2 to {1150, 1250}
     set visible to true
     set frontmost to true
 end tell

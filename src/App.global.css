@@ -11,6 +11,7 @@ body {
     #dd5789 51.77%,
     #7a2c9e 129.35%
   );
+  /* background: none; */
   font-family: sans-serif;
   overflow-y: hidden;
   display: flex;

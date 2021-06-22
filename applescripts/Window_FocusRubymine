@@ -26,8 +26,8 @@ end tell
 
 tell application "System Events" to tell process "RubyMine"
   repeat with theWindow in windows
-    set position of theWindow to {300, 100}
-    set size of theWindow to {2100, 1250}
+    set position of theWindow to {200, 100}
+    set size of theWindow to {2200, 1250}
   end repeat
 
   set visible to true
