@@ -4,7 +4,7 @@ set ignoredList to {"Electron"}
 tell application "Finder"
    activate
    set listOfProcesses to (name of every process where visible is true)
-   
+
    -- now we've got a list of visible processes. You can see the list in a dialog using:
    -- tell me to set selectedProcesses to choose from list listOfProcesses with multiple selections allowed
 
@@ -27,8 +27,8 @@ tell application "Finder"
 end tell
 
 tell application "System Events" to tell process "Chrome"
-    set position of window 1 to {0, 60}
-    set size of window 1 to {_width, 1300}
+    set position of window 1 to {0, 0}
+    set size of window 1 to {_width, _height}
     set visible to true
     set frontmost to true
 end tell
@@ -39,8 +39,8 @@ end tell
 
 tell application "System Events" to tell process "Code"
   repeat with theWindow in windows
-    set position of theWindow to {_width, 60}
-    set size of theWindow to {_width, 1300}
+    set position of theWindow to {_width, 0}
+    set size of theWindow to {_width, _height}
   end repeat
 
   set visible to true
