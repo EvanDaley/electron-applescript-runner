@@ -8,7 +8,7 @@ Workflow:
 3. Start typing the name of a command and hit enter. Boom! The automation will run.
 4. You can speed up your workflow even more by using shortcuts. Typing the shorcut characters will immediately run the script. Shortcuts are listed inside brackets at the beginning of a command. 
 
-![Running app](ElectronShortcut.png)
+![Running app](App.png)
 
 
 Other info:
