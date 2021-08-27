@@ -8,14 +8,19 @@ Workflow:
 3. Start typing the name of a command and hit enter. Boom! The automation will run.
 4. You can speed up your workflow even more by using shortcuts. Typing the shorcut characters will immediately run the script. Shortcuts are listed inside brackets at the beginning of a command. 
 
+![Running app](ElectronShortcut.png)
+
+
 Other info:
-- Refresh the app with command + r to reload applescript files.
-- You can bring applescript runner to the foreground at any time with the global shortcut "shift + enter".
+- To go really fast, use "shift + enter" to focus the app, and customize the shortcut keys (in brackets) to trigger scripts instantly. No need to touch the mouse or type extra keys.
+- Refresh the app with command + r (to reload applescript files).
 - To edit shortcuts, see src/inputMappings.ts
 
 Its pretty magical when you use the keyboard shortcuts. 
-- "shift + enter" to focus the app, then 
-
+- "shift + enter" to focus the app, then 1 to open evernote
+- "shift + enter" and 9 to focus VS Code
+- you can bind the really important/frequent stuff to shortcuts on the home row.
+ 
 ## Install Dependencies
 ```bash
 yarn
