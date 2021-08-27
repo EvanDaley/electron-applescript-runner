@@ -25,7 +25,7 @@ Its pretty magical when you use the keyboard shortcuts.
 ```bash
 yarn
 ```
-
+ 
 ## Starting Development
 
 Start the app in the `dev` environment:
