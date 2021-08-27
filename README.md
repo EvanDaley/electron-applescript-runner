@@ -1,6 +1,6 @@
 ## Usage
 
-This project makes it easy to write automation scripts on mac, and trigger them with a minimal amount of keystrokes. I use it to set custom window configurations, open specific slack conversations, control music, open bookmarked pages, open specific apps, jump straight to display settings, etc etc.
+This project makes it easy to write automation scripts on mac, and trigger them with a minimal amount of keystrokes. I use it to set custom window configurations, open specific slack conversations, control music, open specific apps, just straight to bookmarked pages in chrome, jump straight to display settings, etc etc.
 
 ![Running app](AppDescription.png)
 
